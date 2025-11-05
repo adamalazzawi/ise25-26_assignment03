@@ -68,3 +68,15 @@ Update title and description:
 ```shell
 curl --header "Content-Type: application/json" --request PUT --data '{"id":4,"name":"New coffee","description":"Great croissants","type":"CAFE","campus":"ALTSTADT","street":"Hauptstraße","houseNumber":"95","postalCode":69117,"city":"Heidelberg"}' http://localhost:8080/api/pos/4 # set correct POS id here and in the body
 ```
+Aufgabe c)
+## REST-API Test
+
+### POST Request
+```bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"name":"Bäckerei Kohlmann","description":"Leckeres Brot und Kaffee","type":"CAFE","campus":"ALTSTADT","street":"Hauptstraße","houseNumber":"71","postalCode":69207,"city":"Sandhausen"}' \
+  http://localhost:8080/api/pos
+Anwort:
+{„id":5,"createdAt":"2025-11-05T13:32:12.337577","updatedAt":"2025-11-05T13:32:12.337577","name":"Bäckerei Kohlmann","description":"Leckeres Brot und Kaffee","type":"CAFE","campus":"ALTSTADT","street":"Hauptstraße","houseNumber":"71","postalCode":69207,"city":"Sandhausen"}
+
